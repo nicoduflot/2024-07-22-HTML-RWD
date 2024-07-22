@@ -1,0 +1,60 @@
+/*
+CSS : Cascading Style Sheet ou feuille de style en cascade
+
+Cascade : ce qui est déclaré dans une balise qui contient d'autre balises, est appliqué à la balise et par défaut à toutes les balises qu'elle contient.
+
+Pour appliquer du style CSS à une partie de la page, il faut : 
+- désigner la partie en utlisant un sélecteur CSS
+- décrire la ou les propriétés CSS et leur configuration
+
+selecteur{
+    propriété: valeur(s);
+    propriété: valeur(s);
+}
+
+Unités de tailles en CSS
+
+Unités les plus souvent utilisées en web
+
+px          =>  pixel (il est possible d'avoir des chiffres à virgule 23.5px; )
+em          =>  cadratin. Historiquement unité de mesure en print sur les presses.
+                Le cadratin se calcul par rapport à la taille du parent
+rem         => cadratin racine, lui se calculera toujours depuis la taille racine du cadratin, 
+                - soit celle du navigateur 
+                - soit celle surchargée dans le :root
+%           => la taille définie en % se calcul par rapport à l'espace disponible
+vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
+                vh : viewport height ( hauteur d'affichage du site)
+                50vh => 50% de la taille d'affichage du site
+                si la largeur d'affichage du site 360px (100vw)
+                50vw = 180px
+*/
+
+/* root : racine du CSS */
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* * signifie "n'importe quelle suite de caractère" */
+
+*{
+    box-sizing: border-box;
+}
+
+/* déclaration des classes */
+.content-box{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: content-box;
+    width: 200px;
+}
+
+.border-box{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+}
