@@ -42,6 +42,10 @@ vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
     --nav-bg-color: #333333;
     --nav-link-bg-hover: white;
     --nav-link-color-hover: black;
+    --header-bg-color: var(--nav-bg-color);
+    --header-color: var(--nav-link-color);
+    --footer-bg-color: var(--nav-bg-color);
+    --footer-color: var(--nav-link-color);
 }
 
 /* déclarations générales */
@@ -57,6 +61,7 @@ vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
 
 h1{
     font-size: calc( 2rem + 1vw );
+    line-height: calc( 2rem + 3vw);
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -100,6 +105,55 @@ a, a:visited{
     padding: 10px;
 }
 
+.top{
+    width: 50px;
+    height: 50px;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    background-color: rgba(51, 51, 51, 0.75);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border: 3px solid var(--nav-link-color);
+    
+}
+
+.top a, .top a:visited{
+    color: var(--nav-link-color);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.exemple-position{
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    margin: 1rem auto;
+    position: relative;
+}
+
+.carre-rouge, .carre-vert{
+    width: 50px;
+    height: 50px;
+}
+
+.carre-rouge{
+    background-color: rgba(139, 0, 0, 1);
+    position: absolute;
+    top : 10px;
+    left: 20px;
+    z-index: 10;
+}
+
+.carre-vert{
+    background-color: rgba(0, 100, 0, 1);
+    position: absolute;
+}
 
 /* déclarations selon la structure */
 
@@ -108,16 +162,43 @@ body{
     font-family: var(--main-font);
 }
 
+/* 
+regrouper les déclarations similaire, c'est appliquer le D.R.Y. 
+Don't Repeat Yourself
+*/
+
+body > header,
+body > footer{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+}
+
 /* css navigation par défaut : smartphone */
 
-body > nav ul{
+body > header > div,
+body > nav > div,
+body > main,
+body > footer > div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+body > nav{
+    background-color: var(--nav-bg-color);
+}
+
+body > nav ul,
+body > footer nav ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
     line-height: 2rem;
 }
 
-body > nav ul li{
+body > nav ul li,
+body > footer nav ul li{
     border-bottom: 1px solid var(--nav-border-color);
 }
 
@@ -126,15 +207,100 @@ body > nav ul li:first-child{
 }
 
 body > nav ul li a, 
-body > nav ul li a:visited{
+body > nav ul li a:visited,
+body > footer nav ul li a,
+body > footer nav ul li a:visited{
     display: block;
     color: var(--nav-link-color);
     background-color: var(--nav-bg-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-body > nav ul li a:hover{
+body > nav ul li a:hover,
+body > nav ul li a:focus,
+body > footer nav ul li a:hover,
+body > footer nav ul li a:focus{
     color: var(--nav-link-color-hover);
     background-color: var(--nav-link-bg-hover);
 }
 
+
+
 /* déclaration media queries */
+@media (min-width: 576px){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 720px;
+    }
+
+    /* changement d'apparence du footer */
+    body > footer > div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    body > footer > div > *{
+        width: 100%;
+    }
+
+    body > footer > div nav{
+        width: calc( 50% - 0.4rem);
+    }
+
+}
+
+@media (min-width: 992px){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 960px;
+    }
+
+    /* transformation de la navigation */
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav ul li{
+        border-bottom: unset;
+        border-left: 1px solid var(--nav-border-color);
+    }
+
+    body > nav ul li:first-child{
+        border-top: unset;
+    }
+
+}
+
+@media (min-width: 1200px){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 1320px;
+    }
+}

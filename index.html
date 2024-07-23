@@ -19,12 +19,12 @@
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div>
             <h1>Formation HTML - CSS - RWD</h1>
         </div>
     </header>
-    <nav aria-label="Navigation principale">
+    <nav aria-label="Navigation principale" class="nav-fixed">
         <div>
             <ul>
                 <li><a href="./index.html" title="Page d'accueil">Accueil</a></li>
@@ -38,22 +38,22 @@
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="nav-fixed">
         <section>
             <aside>
                 <b>Table des matières</b>
             </aside>
             <ol type="I">
-                <li><a href="#">Les balises de contenu texte</a></li>
-                <li><a href="#">Les balises sur le texte</a></li>
-                <li><a href="#">Les problèmes courants en CSS</a></li>
-                <li><a href="#">Le CSS Adaptatif (RWD - Responsive Web Design)</a></li>
+                <li><a href="#Les-balises-de-contenu-texte">Les balises de contenu texte</a></li>
+                <li><a href="#Les-balises-sur-le-texte">Les balises sur le texte</a></li>
+                <li><a href="#Les-problemes-courants-en-CSS">Les problèmes courants en CSS</a></li>
+                <li><a href="#Le-CSS-adaptatif">Le CSS Adaptatif (RWD - Responsive Web Design)</a></li>
             </ol>
         </section>
         <section>
             <article>
                 <header>
-                    <h2>Les balises de contenu texte</h2>
+                    <h2 id="Les-balises-de-contenu-texte">Les balises de contenu texte</h2>
                 </header>
                 <!-- 
                     une liste des caractères spéciaux en HTML
@@ -84,12 +84,10 @@
                         <q>I'm Batman</q><br />
                         <cite>Batman</cite>
                     </blockquote>
-                    <pre>Lorem ipsum dolor, sit amet 
-consectetur adipisicing elit. Odit delectus 
-dicta ipsam. Deleniti accusantium nemo ducimus 
-eligendi. Minus, aut placeat. Aliquid quaerat 
-impedit placeat aut dolore obcaecati similique 
-soluta quas!
+                    <pre>Lorem ipsum dolor, 
+sit amet consectetur 
+adipisicing elit. Odit 
+delectus 
                     </pre>
                     <p>
                         Les tableaux se comportent aussi comme des paragraphes
@@ -104,7 +102,7 @@ soluta quas!
             </article>
             <article>
                 <header>
-                    <h2>Les balises sur le texte</h2>
+                    <h2 id="Les-balises-sur-le-texte">Les balises sur le texte</h2>
                 </header>
                 <p>
                     La balise <code>font</code> a été rendure obsolète, mais elle permettait autrefois de changer la couleur, la taille et la police de caractère du texte qu'elle <font color="#8b0000" size="5" face="impact"> entourait</font>. Elle est
@@ -137,7 +135,7 @@ soluta quas!
         <section>
             <article>
                 <header>
-                    <h2>Les problèmes courants en CSS</h2>
+                    <h2 id="Les-problemes-courants-en-CSS">Les problèmes courants en CSS</h2>
                 </header>
                 <h3>Les polices sans empatement</h3>
                 <p>
@@ -175,7 +173,7 @@ soluta quas!
             </article>
             <article>
                 <header>
-                    Le CSS adaptatif
+                    <h2 id="Le-CSS-adaptatif">Le CSS adaptatif</h2>
                 </header>
                 <h3>Les media queries</h3>
                 <p>
@@ -250,6 +248,22 @@ soluta quas!
                     <div class="div-flex">toto</div>
                 </div>
             </article>
+            <article>
+                <header>
+                    <h2>Les positions en CSS</h2>
+                </header>
+                <div class="exemple-position">
+                    <div class="carre-rouge">
+
+                    </div>
+                    <div class="carre-vert">
+
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam debitis porro excepturi exercitationem dicta nam 
+                    </p>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
@@ -279,6 +293,9 @@ soluta quas!
             </nav>
         </div>
     </footer>
+    <div class="top">
+        <a href="#top" title="Revenir en haut">Top</a>
+    </div>
 </body>
 
 </html>
