@@ -35,6 +35,13 @@ vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
 :root{
     --main-font: Arial, Helvetica, sans-serif;
     --main-link-color: darkgreen;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    --nav-border-color: #888888;
+    --nav-link-color: white;
+    --nav-bg-color: #333333;
+    --nav-link-bg-hover: white;
+    --nav-link-color-hover: black;
 }
 
 /* déclarations générales */
@@ -100,3 +107,34 @@ body{
     margin: 0;
     font-family: var(--main-font);
 }
+
+/* css navigation par défaut : smartphone */
+
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+}
+
+body > nav ul li{
+    border-bottom: 1px solid var(--nav-border-color);
+}
+
+body > nav ul li:first-child{
+    border-top: 1px solid var(--nav-border-color);
+}
+
+body > nav ul li a, 
+body > nav ul li a:visited{
+    display: block;
+    color: var(--nav-link-color);
+    background-color: var(--nav-bg-color);
+}
+
+body > nav ul li a:hover{
+    color: var(--nav-link-color-hover);
+    background-color: var(--nav-link-bg-hover);
+}
+
+/* déclaration media queries */
