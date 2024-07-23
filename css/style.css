@@ -33,13 +33,33 @@ vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
 /* root : racine du CSS */
 
 :root{
-    font-family: Arial, Helvetica, sans-serif;
+    --main-font: Arial, Helvetica, sans-serif;
+    --main-link-color: darkgreen;
 }
 
-/* * signifie "n'importe quelle suite de caractère" */
+/* déclarations générales */
+/*
+
+* signifie "n'importe quelle suite de caractère"
+
+*/
 
 *{
     box-sizing: border-box;
+}
+
+h1{
+    font-size: calc( 2rem + 1vw );
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+a, a:visited{
+    color: var(--main-link-color);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* déclaration des classes */
@@ -57,4 +77,26 @@ vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
     padding: 10px;
     box-sizing: border-box;
     width: 200px;
+}
+
+.deuxEm{
+    font-size: 2em;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.deuxRem{
+    font-size: 2rem;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* déclarations selon la structure */
+
+body{
+    margin: 0;
+    font-family: var(--main-font);
 }
