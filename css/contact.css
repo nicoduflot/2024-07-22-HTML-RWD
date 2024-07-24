@@ -1,0 +1,26 @@
+/* style a ajouter aux page quand on utilise un formulaire */
+
+.info-form, .alert-form{
+    position: relative;
+    padding-left: 2.2rem;
+    min-height: 2.2rem;
+}
+
+.info-form::before{
+    font-family: 'bootstrap-icons';
+    content: '\f430';
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.alert-form:before{
+    font-family: 'bootstrap-icons';
+    content: '\f33a';
+    color: orangered;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -165,7 +165,46 @@
                 <header>
                     <h3>l'iframe</h3>
                 </header>
-                
+                <ul>
+                    <li><a href="./documents/CRAM.pdf" target="document">fichier CRAM</a></li>
+                    <li><a href="./documents/A4-portrait-hex-0.5-inches-paper.pdf" target="document">Hexagones</a></li>
+                    <li><a href="./documents/books.xml" target="document">books.xml</a></li>
+                    <li><a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1571444557&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" target="document">Album Lizzo</a></li>
+                </ul>
+                <div style="max-width: 600px;">
+                    <iframe frameborder="no" width="100%" style="height: 300px;" name="document" src="./documents/fichier.txt"></iframe>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>La vidéo</h2>
+            <article>
+                <header>
+                    <h3>Vidéos hébergées sur le site</h3>
+                </header>
+                <p>
+                    La balise vidéo se comporte comme la balise audio (et inversement).
+                </p>
+                <figure>
+                    <div class="video video-16-9">
+                        <video src="./media/video/Fallout-4-Launch-Trailer.mp4" muted controls preload="auto"></video> 
+                    </div>
+                </figure>
+                <figure>
+                    <div class="video video-16-9">
+                        <video controls muted>
+                            <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                            <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        </video>
+                    </div>
+                </figure>
+                <header>
+                    <h3>Les vidéos hébergées sur des sites tiers</h3>
+                </header>
+                <h4>Youtube</h4>
+                <div class="video video-16-9">
+                    <iframe src="https://www.youtube.com/embed/pMfRfa7Aa4w?si=B8rIUEpIkNxLTL3j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </article>
         </section>
     </main>

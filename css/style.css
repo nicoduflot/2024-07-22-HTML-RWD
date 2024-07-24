@@ -365,6 +365,10 @@ body > footer nav ul li a:focus{
         width: calc( 50% - ( 2 * var(--gutter-x) ) );
     }
 
+    section > article:first-of-type:last-of-type{
+        width: calc( 100% - ( 2 * var(--gutter-x) ) );
+    }
+
 }
 
 @media (min-width: 1200px){
