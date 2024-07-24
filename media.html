@@ -62,9 +62,43 @@
                     sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
                 </p>
                 <p>
-                    img peut ête utilisé hors et in paragraphe
+                    img peut ête utilisé hors et in paragraphe.<br />
+                    <img src="./images/doc-signal-200w.png" alt="Portrait dans le style synthwave du personnage Doc Emmet Brown, de la série de films retour vers le futur. Le créateur de l'image : James White" /><br />
+                    Bla
+                </p>
+                <p>
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="Image fond d'écran inspiration jeu fallout 4" /><br />
+                    <span class="legende">Image fond d'écran inspiration jeu fallout 4</span>
+                </p>
+                <h4>Picture</h4>
+                <p>
+                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image affichée, on peut sélectionner la même image avec des formats différents.
+                </p>
+                <picture>
+                    <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                    <source srcset="./images/doc-signal-250w.png" media="(min-width:400px)" />
+                    <img src="./images/doc-signal-200w.png" />
+                </picture>
+                <h4>Figure</h4>
+                <p>
+                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et
+                    l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une
+                    légende, avec la balise figcaption.
+                </p>
+                <figure>
+                    <img src="./images/james-white-composite-400w.png" 
+                    alt="image composite de plusieurs images de l'artiste James White, dans le style synthwave" />
+                    <figcaption>
+                        L'artiste James White produit des illustrations numériques largement inspirées du style des affiche de films des années 80.
+                    </figcaption>
+                </figure>
+                <p>
+                    La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le référencement ainsi que l'accessibilité.
                 </p>
             </article>
+        </section>
+        <section>
+            <h2>L'audio</h2>
         </section>
     </main>
     <footer>

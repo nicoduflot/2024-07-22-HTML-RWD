@@ -134,6 +134,12 @@ a, a:visited{
     font-weight: bold;
 }
 
+/* css adapatatif de base pour les images */
+
+img{
+    max-width: 100%;
+}
+
 /* déclaration des classes */
 .content-box{
     border: 1px solid black;
