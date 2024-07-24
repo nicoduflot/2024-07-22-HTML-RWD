@@ -99,6 +99,68 @@
         </section>
         <section>
             <h2>L'audio</h2>
+            <article>
+                <header>
+                    <h3>L'audio hébergé sur le site</h3>
+                </header>
+                <p>
+                    Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                    Cette balise peut soit appeler un seul fichier, ou utliser aussi la balise source, déjà vu associée
+                    à la balise picture.
+                    Utiliser plusieurs sources permet de s'adapter à la configuration de l'utilisateur. Un appareil, pour
+                    lire un fichier audio (ou vidéo) doit posséder les bon codecs. si je met a disposition un fichier
+                    avec une extension que l'appareil qui essai de le jouer ne connaît, j'aurais une erreur.
+                    Si je propose le même son dans des formats différent avec source, l'appareil lancera le premier
+                    fichier qu'il est capable de lire.
+                </p>
+                <figure>
+                    <audio controls id="diablo">
+                        <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <figcaption>
+                        Lire le fichier<br />
+                        <button id="playAudio" data-target="diablo" style="border: unset; background-color: unset;">
+                            <i class="bi bi-play-btn-fill" style="font-size: 2rem;"></i>
+                        </button> 
+                        <button id="pauseAudio" data-target="diablo" style="border: unset; background-color: unset;">
+                            <i class="bi bi-pause-btn-fill" style="font-size: 2rem;"></i>
+                        </button> 
+                    </figcaption>
+                    <script>
+                        const play = document.getElementById('playAudio');
+                        const pause = document.getElementById('pauseAudio');
+
+                        play.addEventListener('click', function(){
+                            document.getElementById(play.dataset.target).play();
+                        });
+                        
+                        pause.addEventListener('click', function(){
+                            document.getElementById(pause.dataset.target).pause();
+                        });
+                    </script>
+                </figure>
+                <header>
+                    <h3>L'audio hébergé sur un site tier</h3>
+                </header>
+                <p>
+                    Les média audio (et aussi les vidéos) hébergés sur des site tiers, quand ils sont partageables, 
+                    le partage se fait grâce au principe des iframes. L'iframe est un cadre qui permet d'appeler une autre ressource,
+                    comme par exemple une page web.
+                </p>
+                <iframe width="90%" height="200px" src="./test-css.html"></iframe>
+                <p>
+                    Comme l'iframe appelle une page html, cette page contient le fichier audio et un lecteur, dans même
+                    esprit que celui qu'on a créé précédement.
+                </p>
+                <h4>Soundcloud</h4>
+                <p>
+                    partageons l'album qui se trouve à cette <a href="https://soundcloud.com/lizzomusic" target="_blank">adresse</a>
+                </p>
+                <figure>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1571444557&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/pink" title="Pink" target="_blank" style="color: #cccccc; text-decoration: none;">Pink</a></div>
+                </figure>
+            </article>
         </section>
     </main>
     <footer>
