@@ -84,6 +84,10 @@ sélecteur CSS :
                                                                 +3 => le troisième de la ligne
 */
 
+/* les imports de fichiers css dans un autre fichier css DOIVENT ABSOLUMENT ÊTRE FAIT AVANT les lignes du CSS */
+
+@import url('./bootstrap-icons.css');
+
 /* root : racine du CSS */
 
 :root{
