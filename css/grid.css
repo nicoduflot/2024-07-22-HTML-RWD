@@ -1,0 +1,15 @@
+.espace-grille{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.grid-div{
+    border: 3px solid var(--header-bg-color);
+}
+
+@media (min-width: 576px){
+    .espace-grille{
+        grid-template-columns: 1fr 1fr;
+    }
+}

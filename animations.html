@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML - CSS - RWD </title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
 </head>
 
 <body>
@@ -45,7 +47,86 @@
         </div>
     </nav>
     <main>
+        <section>
+            <h2>Les animations en CSS</h2>
+            <article>
+                <header>
+                    <h3 class="animate__animated animate__pulse animate__infinite">Le "ready-made"</h3>
+                </header>
+                <p>
+                    Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
+                </p>
+                <p>
+                    <button id="animation">Faire bouger le paragraphe suivant</button>
+                </p>
+                    <p id="cible-animation">Coucou !</p>
+                <script>
+                    const buttonAnime = document.getElementById('animation');
+                    const cibleAnimation = document.getElementById('cible-animation');
+                    buttonAnime.addEventListener('click', function(){
+                        
+                        cibleAnimation.classList.add('animate__animated', 'animate__bounce', 'animate__repeat-1');
 
+                        cibleAnimation.addEventListener('animationend', function(){
+                            cibleAnimation.classList.remove('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                        });
+                    });
+                </script>
+                <h3>L'animation "DIY"</h3>
+                <h4>les transitions</h4>
+                <p class="translation">
+                    Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
+                </p>
+                <p class="scale-border">
+                    Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transition et / ou transformations.
+                </p>
+                <p>
+                    on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                </p>
+                <ul>
+                    <li>transition-property: la propriété CSS subissant la transition</li>
+                    <li>transition-duration: la durée de la transition en seconde</li>
+                    <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)</li>
+                    <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                </ul>
+                <p>
+                    <code>
+                        .scale-up{<br />
+                        &nbsp;&nbsp;transition-property: transform;<br />
+                        &nbsp;&nbsp;transition-duration: 0.5s;<br />
+                        &nbsp;&nbsp;transition-timing-function: ease;<br />
+                        &nbsp;&nbsp;transition-delay: 0.2s;<br />
+                        &nbsp;&nbsp;<span class="code-comment">/*<br />
+                        &nbsp;&nbsp;transition: transform 0.5s ease 0.2s;<br />
+                        &nbsp;&nbsp;*/</span><br />
+                        }<br />
+                        <br />
+                        .scale-up:hover{<br />
+                        &nbsp;&nbsp;transform: scale(1.2);<br />
+                        }<br />
+                    </code>
+                </p>
+                <h4>Les images clefs</h4>
+                <p>
+                    Comme pour les dessin animés, l'animateur principal va définir des images clefs d'un story board, le navigateur va faire office d'intervaliste et créer les images intermédiaires entre les images clefs.
+                </p>
+                <div class="espace-animation">
+                    <div class="cercle-animation animation">
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </div>
+                </div>
+                <p>
+                    Appelez-nous : 
+                    <i class="bi bi-telephone-fill clignotant"></i>
+                </p>
+                <div class="chargement">
+                    <div class="charge"></div>
+                </div>
+                <div class="chargement">
+                    <div class="charge-step"></div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         <div>

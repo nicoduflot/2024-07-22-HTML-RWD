@@ -57,6 +57,8 @@ p::first-letter{
 
 /* style des différents éléments du formulaire */
 
+
+
 form :focus
 {
     outline:3px solid transparent;
@@ -83,4 +85,12 @@ select{
     line-height: 1.5rem;
     border-radius: 0.2rem;
     border-style: solid;
+}
+
+@media (min-width: 992px){
+    form{
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

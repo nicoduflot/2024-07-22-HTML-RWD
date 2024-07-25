@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML - CSS - RWD </title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
 </head>
 
 <body>
@@ -24,10 +25,12 @@
                     <a href="./media.html" title="les media en HTML"><i class="bi bi-film"></i> Media</a>
                 </li>
                 <li>
-                    <a href="./contact.html" title="Accès au formulaire de contact"><i class="bi bi-envelope-fill"></i> Contact</a>
+                    <a href="./contact.html" title="Accès au formulaire de contact"><i class="bi bi-envelope-fill"></i>
+                        Contact</a>
                 </li>
                 <li>
-                    <a href="./animations.html" title="Les animations en CSS"><i class="bi bi-camera-reels-fill"></i> Animations</a>
+                    <a href="./animations.html" title="Les animations en CSS"><i class="bi bi-camera-reels-fill"></i>
+                        Animations</a>
                 </li>
                 <li>
                     <a href="./grid.html" title="Les grilles en CSS"><i class="bi bi-grid-3x3"></i> Grilles CSS</a>
@@ -36,16 +39,130 @@
                     <a href="./design-css.html" title="Créations en CSS"><i class="bi bi-brush-fill"></i> Design</a>
                 </li>
                 <li>
-                    <a href="./bootstrap.html" title="Le Framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a>
+                    <a href="./bootstrap.html" title="Le Framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                        Bootstrap</a>
                 </li>
                 <li>
-                    <a href="./landing-page.html" title="Page promo été 2024" target="_blank"><i class="bi bi-bag-fill"></i> Solde 2024</a>
+                    <a href="./landing-page.html" title="Page promo été 2024" target="_blank"><i
+                            class="bi bi-bag-fill"></i> Solde 2024</a>
                 </li>
             </ul>
         </div>
     </nav>
     <main>
+        <section>
+            <article>
+                <h3>La base des grilles</h3>
+                <p>
+                    La propriété <code>grid</code> permet de transformer l'élément qui la possède en une grille.
+                </p>
+                <p>
+                    Il faut ensuite définir le comportement de la grille :
+                </p>
+                <ul>
+                    <li>Le modèle des colonnes</li>
+                    <li>Les espaces (goutières) entre les éléments de la grille</li>
+                    <li>La hauteur minimale, maximale ou automatique des lignes</li>
+                    <li>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid" target="_blank">
+                            Plus d'information sur la définition des grilles.
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    On applique le display grid à <code>div class="espace-grille"</code>. Ensuite, avec
+                    <code>grid-template-columns</code> on indique le nombre de fractions horizontales appliqué à
+                    <code>div class="espace-grille"</code>, ici, une seule fraction (1fr => une colonne). Enfin, une
+                    goutière (gap) de 0.5rem entre les éléments de la grille.
+                </p>
+                <p>
+                    espace-grille{<br />
+                    &nbsp;&nbsp;display: grid;<br />
+                    &nbsp;&nbsp;margin: 0;<br />
+                    &nbsp;&nbsp;grid-template-columns: 1fr;<br />
+                    &nbsp;&nbsp;gap: 0.5rem;<br />
+                    }
+                </p>
+                <p>
+                    Une fois que cela est défini, chaque élément enfant direct de body s'affichera sur une colonne.
+                </p>
+                <div class="espace-grille">
+                    <div class="grid-div">
+                        <h3>01</h3>
+                        <p>la div n°01</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>02</h3>
+                        <p>la div n°02</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>03</h3>
+                        <p>la div n°03</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>04</h3>
+                        <p>la div n°04</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>05</h3>
+                        <p>la div n°05</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>06</h3>
+                        <p>la div n°06</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>07</h3>
+                        <p>la div n°07</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>08</h3>
+                        <p>la div n°08</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>09</h3>
+                        <p>la div n°09</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>10</h3>
+                        <p>la div n°10</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>11</h3>
+                        <p>la div n°11</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>12</h3>
+                        <p>la div n°12</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>13</h3>
+                        <p>la div n°13</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>14</h3>
+                        <p>la div n°14</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>15</h3>
+                        <p>la div n°15</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>16</h3>
+                        <p>la div n°16</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>17</h3>
+                        <p>la div n°17</p>
+                    </div>
+                    <div class="grid-div">
+                        <h3>18</h3>
+                        <p>la div n°18</p>
+                    </div>
+                </div>
 
+            </article>
+        </section>
     </main>
     <footer>
         <div>
