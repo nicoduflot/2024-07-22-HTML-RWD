@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OldeEnglish';
+    src: url('fonts/OldeEnglish.eot');
+    src: url('fonts/OldeEnglish.eot') format('embedded-opentype'),
+         url('fonts/OldeEnglish.woff2') format('woff2'),
+         url('fonts/OldeEnglish.woff') format('woff'),
+         url('fonts/OldeEnglish.ttf') format('truetype'),
+         url('fonts/OldeEnglish.svg#OldeEnglish') format('svg');
+}

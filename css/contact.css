@@ -1,26 +1,81 @@
-/* style a ajouter aux page quand on utilise un formulaire */
+/* style a ajouter aux pages quand on utilise un formulaire */
+@import url('./OldeEnglish.css');
+/* ajouter une police de caractère sur le site */
+@font-face {
+  font-display: block;
+  font-family: "Cloister";
+  src: url("./fonts/CloisterBlack.ttf") format("truetype");
+}
 
-.info-form, .alert-form{
+@font-face {
+    font-display: block;
+    font-family: "Rubik";
+    src: url("./fonts/RubikMonoOne-Regular.ttf") format("truetype");
+  }
+
+.info{
     position: relative;
-    padding-left: 2.2rem;
+    padding: 1rem 0 1rem 2.7rem;
     min-height: 2.2rem;
+    border-radius: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.info::before{
+    font-family: 'bootstrap-icons';
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+}
+
+.info-form{
+    border-color: darkblue;
+}
+
+.alert-form{
+    border-color: orangered;
 }
 
 .info-form::before{
-    font-family: 'bootstrap-icons';
     content: '\f430';
-    font-size: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    color: darkblue;
 }
 
-.alert-form:before{
-    font-family: 'bootstrap-icons';
+.alert-form::before{
     content: '\f33a';
     color: orangered;
-    font-size: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+}
+
+p::first-letter{
+    font-family: 'Rubik', Arial;
+    /*text-transform: lowercase;*/
+}
+
+/* style des différents éléments du formulaire */
+
+form :focus {
+    outline:3px solid transparent;
+    border-color: green;
+    border-style: solid;
+}
+
+fieldset{
+    border-radius: 1rem;
+    border-style: solid;
+}
+
+legend{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+input{
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    line-height: 1.5rem;
+    border-radius: 0.2rem;
+    border-style: solid;
 }

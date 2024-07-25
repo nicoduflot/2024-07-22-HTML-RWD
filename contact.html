@@ -87,16 +87,34 @@
                         <p>
                             <label for="nom">Nom :</label> 
                             <input type="text" name="nom" id="nom" autofocus required aria-describedby="info-nom" />
-                            <div class="info-form" id="info-nom">
+                            <div class="info info-form" id="info-nom">
                                 Ce champ doit contenir votre nom de famille d'usage, il est obligatoire.
+                            </div>
+                        </p>
+                        <p>
+                            <label for="prenom">Prénom :</label> 
+                            <input type="text" name="prenom" id="prenom" aria-describedby="info-prenom" />
+                            <div class="info info-form" id="info-prenom">
+                                Ce champ doit contenir votre prénom d'usage, il n'est pas obligatoire.
+                            </div>
+                        </p>
+                        <p>
+                            <label for="email">Votre Email :</label> 
+                            <input type="email" name="email" id="email" required aria-describedby="info-email"
+                            pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$"
+                            />
+                            <div class="info info-form" id="info-email">
+                                Ce champ doit contenir votre email, il est obligatoire.
                             </div>
                         </p>
                     </fieldset>
                     <p>
-                        <input type="submit" value="Envoyer" />
+                        <button type="submit" class="submit" value="Envoyer">Envoyer</button>
+                        <button type="reset" class="reset">Effacer les données</button>
                     </p>
                 </form>
-                <div class="alert-form">
+                <div class="info alert-form">
+                    toto
                 </div>
             </article>
         </section>
