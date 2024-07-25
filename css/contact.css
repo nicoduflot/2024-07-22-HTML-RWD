@@ -1,5 +1,6 @@
 /* style a ajouter aux pages quand on utilise un formulaire */
 @import url('./OldeEnglish.css');
+@import url('./media.css');
 /* ajouter une police de caractère sur le site */
 @font-face {
   font-display: block;
@@ -56,7 +57,8 @@ p::first-letter{
 
 /* style des différents éléments du formulaire */
 
-form :focus {
+form :focus
+{
     outline:3px solid transparent;
     border-color: green;
     border-style: solid;
@@ -72,7 +74,10 @@ legend{
     padding-right: 0.5rem;
 }
 
-input{
+input[type="email"],
+input[type="text"],
+select{
+    height: 2rem;
     font-size: 1rem;
     padding-left: 0.2rem;
     line-height: 1.5rem;
