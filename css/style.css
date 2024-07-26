@@ -106,6 +106,7 @@ sélecteur CSS :
     --footer-color: var(--nav-link-color);
     --gutter-x: 0.5rem;
     --gutter-y: 0.5rem;
+    scroll-behavior: smooth;
 }
 
 /* déclarations générales */

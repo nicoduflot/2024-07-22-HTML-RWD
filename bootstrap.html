@@ -5,50 +5,222 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML - CSS - RWD </title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <style>
+        .borders{
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
-    <header id="top">
-        <div>
-            <h1>Formation HTML - CSS - RWD</h1>
+    <header id="top" class="bg-dark text-white">
+        <div class="container">
+            <!--
+            les classes de marge bs
+            m - p type de marge margin ou padding
+            s à gauche (start au début du flex)
+            t top
+            e à droite (end : à la fin du flex)
+            b bottom
+            p-1 marge intérieur sur tous les côtés
+            pt-2 marge intérieur sur le bas de l'élément
+
+            x marge en haut et en bas
+            y marge à gauche et à droite
+
+            -->
+            <h1 class="mb-0">Formation HTML - CSS - RWD</h1>
         </div>
     </header>
-    <nav aria-label="Navigation principale">
-        <div>
-            <ul>
-                <li>
-                    <a href="./index.html" title="Page d'accueil"><i class="bi bi-house-door-fill"></i> Accueil</a>
-                </li>
-                <li>
-                    <a href="./media.html" title="les media en HTML"><i class="bi bi-film"></i> Media</a>
-                </li>
-                <li>
-                    <a href="./contact.html" title="Accès au formulaire de contact"><i class="bi bi-envelope-fill"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="./animations.html" title="Les animations en CSS"><i class="bi bi-camera-reels-fill"></i> Animations</a>
-                </li>
-                <li>
-                    <a href="./grid.html" title="Les grilles en CSS"><i class="bi bi-grid-3x3"></i> Grilles CSS</a>
-                </li>
-                <li>
-                    <a href="./design-css.html" title="Créations en CSS"><i class="bi bi-brush-fill"></i> Design</a>
-                </li>
-                <li>
-                    <a href="./bootstrap.html" title="Le Framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a>
-                </li>
-                <li>
-                    <a href="./landing-page.html" title="Page promo été 2024" target="_blank"><i class="bi bi-bag-fill"></i> Solde 2024</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark" data-theme="dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/no-logo-white-2.svg" class="img-fluid" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                    -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" title="Page d'accueil"><i class="bi bi-house-door-fill"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./media.html" title="les media en HTML"><i class="bi bi-film"></i> Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html" title="Accès au formulaire de contact"><i class="bi bi-envelope-fill"></i>
+                            Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./animations.html" title="Les animations en CSS"><i class="bi bi-camera-reels-fill"></i>
+                            Animations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./grid.html" title="Les grilles en CSS"><i class="bi bi-grid-3x3"></i> Grilles CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./design-css.html" title="Créations en CSS"><i class="bi bi-brush-fill"></i> Design</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./bootstrap.html"  aria-current="page" title="Le Framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                            Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./landing-page.html" title="Page promo été 2024" target="_blank"><i
+                                class="bi bi-bag-fill"></i> Solde 2024</a>
+                    </li>
+                </ul>
+                <!--
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                -->
+            </div>
         </div>
     </nav>
-    <main>
-
+    <main class="container">
+        <section class="row">
+            <h2>Bootstrap</h2>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
+                <header>
+                    <h3>Les colonnes</h3>
+                </header>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique sunt voluptatum ratione id, ad esse. Unde tempore ipsa et beatae nihil rerum autem asperiores provident sed perspiciatis, placeat repellendus temporibus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque consectetur quos recusandae! Sit ex, perferendis quos adipisci fuga quae, rem mollitia reprehenderit sapiente repellendus ab rerum sequi quibusdam in.
+                </p>
+            </article>
+            <article class="col-lg-6 col-xl-8 col-xxl-3">
+                <header>
+                    <h3>Les colonnes</h3>
+                </header>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique sunt voluptatum ratione id, ad esse. Unde tempore ipsa et beatae nihil rerum autem asperiores provident sed perspiciatis, placeat repellendus temporibus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque consectetur quos recusandae! Sit ex, perferendis quos adipisci fuga quae, rem mollitia reprehenderit sapiente repellendus ab rerum sequi quibusdam in.
+                </p>
+            </article>
+            <article class="col-lg-6 col-xl-8 col-xxl-3">
+                <header>
+                    <h3>Les colonnes</h3>
+                </header>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique sunt voluptatum ratione id, ad esse. Unde tempore ipsa et beatae nihil rerum autem asperiores provident sed perspiciatis, placeat repellendus temporibus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque consectetur quos recusandae! Sit ex, perferendis quos adipisci fuga quae, rem mollitia reprehenderit sapiente repellendus ab rerum sequi quibusdam in.
+                </p>
+            </article>
+            <article class="col-lg-6 col-xl-4 col-xxl-3">
+                <header>
+                    <h3>Les colonnes</h3>
+                </header>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique sunt voluptatum ratione id, ad esse. Unde tempore ipsa et beatae nihil rerum autem asperiores provident sed perspiciatis, placeat repellendus temporibus.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque consectetur quos recusandae! Sit ex, perferendis quos adipisci fuga quae, rem mollitia reprehenderit sapiente repellendus ab rerum sequi quibusdam in.
+                </p>
+            </article>
+        </section>
+        <section class="row">
+            <article>
+                <header>
+                    <h3>Démo sur les colonnes</h3>
+                </header>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col-5">
+                        <div class="borders">.col-5</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="borders">.col-6</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">.col</div>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
-        <div>
+        <div class="container">
             <div>&copy; DAWAN - 2024 </div>
             <nav>
                 <h4>Site Map</h4>
